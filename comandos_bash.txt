@@ -30,12 +30,41 @@ ls -a (aparece os arquivos mais o ocultos ./ e ../
 Para voltar para Desktop (o diretório acima)
 cd ..  (ou seja, volta uma pasta acima)
 
-
-
-
 Para completar a digitação, por exemplo, Desk e aperta TAB que ele completa
 Desktop (o TAB fica embaixo do 1).
-O CTR L dá uma limpada na tela
+
+O "CTR L" dá uma limpada na tela.
+
+
+Comando git init .   torna a pasta especial, ou seja, torna a pasta possível
+de controlar versionamento.
+
+Carlos@DESKTOP-VM1IU3C MINGW64 ~/Desktop/curso_git_2026
+$ git init .
+Initialized empty Git repository in C:/Users/Carlos/Desktop/curso_git_2026/.git/
+
+Vamos entender - ele está dizendo que foi iniciado um arquivo de 
+repositório vazio no endereço citado.
+O .git/ não aparece porque é arquivo oculto. O que torna esta pasta epecial 
+é a pasta dentro dela que é o . git/
+
+Se der um rm - rf .git/ a pasta é apagada e volta a ser o que era antes.
+
+COMO ABRIR UM EDITOR DE TEXTO DENTRO DO BASH
+abrir o nano com o nome do arquivo que vamos criar:
+nano nomearquivoquevoucriar.txt
+
+depois salvar com CTR O - ele salva o que foi digitado e criando outro arquivo no desktop
+
+PAra sair do nano CRT X
+
+
+
+
+
+
+
+
 
 
 
