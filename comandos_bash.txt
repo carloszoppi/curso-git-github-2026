@@ -33,7 +33,15 @@ cd ..  (ou seja, volta uma pasta acima)
 Para completar a digitação, por exemplo, Desk e aperta TAB que ele completa
 Desktop (o TAB fica embaixo do 1).
 
+-------------------------------------------------------------------
 O "CTR L" dá uma limpada na tela.
+
+Para limpar a tela do Git Bash, você tem duas opções principais:
+
+* Comando clear: Digite clear e pressione Enter. Isso limpa a visualização atual, jogando o histórico anterior para cima.
+* Atalho Ctrl + L: Pressione simultaneamente as teclas Ctrl e L. É a forma mais rápida e faz exatamente o mesmo que o comando clear. [1, 2, 3, 4] 
+
+-------------------------------------------------------------------------
 
 
 Comando git init .   torna a pasta especial, ou seja, torna a pasta possível

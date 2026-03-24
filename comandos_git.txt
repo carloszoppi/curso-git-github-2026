@@ -38,6 +38,10 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
         comandos_git.txt
 
+-------------------------------------------------------------------------
+
+git add *.txt adiciona todos os arquivos .txt para dar o commit.
+
 --------------------------------------------------------------------------
 git commit -m "msg" -> faz commit do que estava para ser comitado
 Tem que colocar uma mensagem, por exemplo: git commit - m "primeiros comandos_bahs", para criar um check point e criando uma descriçãod do check point para saber o que é e poder voltar
@@ -62,14 +66,105 @@ $ git commit -m "primeiros comandos bash"
 -----------------------------------------------------------------------------
 Ao terminar o commit, dá um git status para ver se está tudo certo.
 
+------------------------------------------------------------------------
+Quando alteramos arquivos ou criamos novos arquivos e damos um git status,
+o git vai mostrar o arquivo modificado que precisa de novo commit e o 
+arquivo criado que precisa ser adicionado:
+
+Carlos@DESKTOP-VM1IU3C MINGW64 ~/Desktop/curso_git_2026 (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   comandos_bash.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        comandos_git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+Então, damos um 
+git add comandos_bash.txt
+
+e depois o comando
+git add comandos_git.txt
+
+Então:
+Carlos@DESKTOP-VM1IU3C MINGW64 ~/Desktop/curso_git_2026 (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   comandos_bash.txt
+        new file:   comandos_git.txt
+
+ 
+os dois arquivos estão prontos para serem comitados.
+
+Outra forma de fazer isso seria dar um git add . (ou seja, ele vai fazer
+o add de tudo que está na pasta) e depois git commit -m "mensagem"
+
 --------------------------------------------------------------------------
+Os commits ou checkpoints ficam salvos na pasta .git/
+As coisas ficam salvas do jeito que estão.
+
+========================================================================
+
+FLUXO DE TRABALHO
+1. cirar o diretório do projeto
+2 - iniciar o git dentro do diretório criado (git init . )
+3 - editar ou criar arquivos
+4 - git status
+5 - git add <nome arquivo>
+6 - git status
+7 - git commit -m "mensagem"
+8 - git status
+9 - volta para espaço 3
+
+===========================================================================
+
 git log -> mostra todo histórico de commit
+
+-------------------------------------------------------------------------
+
 git diff -> para saber o que tem de diferença do estado atual do arquivo em relação ao commit anterior
 	o @@ -2,4 + 2,4@@ significa que tem coisa que foi excluída e coisa que foi adicionada;
 	o que aparece em verde precedido de um sinal de + é o que foi adicionado;
 git diff . -> mostra arquivo por arquivo o que mudou
 
 q ctrl - se travar (aparece ":")
+
+----------------------------------------------------------------------- 
+TRAVADO: 
+Para sair da visualização do git diff no Git Bash e voltar ao prompt normal 
+(onde você pode mudar de branch para a main), você só precisa pressionar 
+a tecla q (de quit ou sair). 
+
+Aqui está o passo a passo:
+Sair do Diff: Com o terminal mostrando os dois pontos (:) no final, 
+pressione a tecla q no seu teclado.
+Voltar para a main: Após sair (o prompt $ vai reaparecer), 
+digite o comando:
+
+git checkout main
+
+ou, se estiver usando uma versão mais recente do Git:
+
+git switch main
+ 
+Outras formas de sair, caso o q não funcione:
+Ctrl + C: Força a interrupção do comando e volta para o prompt.
+Shift + Q: Em alguns sistemas, o Q maiúsculo funciona melhor. 
+
+O que está acontecendo: O Git usa um "pager" (geralmente o comando less) 
+para mostrar textos longos. Os dois pontos indicam que há mais conteúdo 
+ou que você está dentro desse modo de visualização. O q informa ao less 
+que você terminou de ler.
+
+-------------------------------------------------------------------------
 
 Se estiver trabalhando com vários arquivos e der um git add . 
 ele vai levar para ser comitado todos os arquivos (ou seja, todos vão para a fase de "stage"). 
