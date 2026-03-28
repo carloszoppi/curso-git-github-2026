@@ -1,1 +1,6 @@
 ESte arquivo contém inforações adicionais para git
+
+- comandos primários
+- comandos secundários
+
+
