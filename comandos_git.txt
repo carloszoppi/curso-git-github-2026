@@ -175,14 +175,20 @@ estar para ser comitado?
 - quando usa este comando o arquivo agora aparece na fase de "unstage".
 - com um novo git status vai aparecer em vermelho o arquivo que foi modificado e não foi para fase de stage.
 
+-----------------------------------------------------------------------
 
 Ramificação - branch
+
 git checkout -b nomedabranch     (o -b é porque ainda não existe a branch)
 muda agora da branch main para a secundária.
 É como se tivessemos copiado o projeto e salvo em uma outra pasta e agora
 estamos trabalhando dentro desta outra pasta.
+A gente isolou os arquivos. Não é um back up é uma cópia.
+Depois que a nova branch foi criada com o -b não precisa usar o -b novamente 
+para esta mesma branch.
 
-git branch mostra todas as branchs do projeto e mostra em verde a branch que estamos trabalhando
+git branch : mostra todas as branchs do projeto e mostra em verde a branch 
+que estamos trabalhando
 
 para voltar para a branch main:
 ->git checkout main
@@ -193,15 +199,24 @@ para voltar para a secundária
 Para comitar um novo arquivo criado na branch
 git add nomedoarquivo
 
+--------------------------------------------------------------------
+Se você volta para a main o estado é outro, ou seja, se você alterou
+ou criou un novo arquivo na branch secundária, ao retornar para a main
+isso não existe. É como se salvasse o jogo, fizesse a batalha, ganhou a 
+batalha e salvou. Se voltar para o save anterior a batalha não aconteceu.
+
+-----------------------------------------------------------------------
 
 COMANDO MERGE
 
-$ git merge secundaria (porque eujá estou na main)
-traz todas as alterações, não o arquivo.
+$ git merge secundaria (porque eu já estou na main)
+traz todas as alterações, não os arquivos.
 nada acontece na branch secundária. Ela fica a mesma
 
+----------------------------------------------------------------------
 
 DELETAR UMA BRANCH
+
 git branch -D nomedabranch
 Eu não posso estar, por exemplo, na branch secundária e querer deletar ela
 Tenho que estar em outra branch para fazer isso.
