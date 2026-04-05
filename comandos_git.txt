@@ -225,7 +225,20 @@ Uma das funções de deletar uma branch é manter o ambiente de trabalho limpo.
 Uma vez que já foi feito a merge, não há porque manter a branch.
 
 
+--------------------------------------------------------------------------
+Como criar um novo arquivo a partir do git bash:
 
+$ touch nomedoarquivo.extensão
+ 
+por exemplo,
+
+$ touck README.md   # .md é a extensão de markdown
+
+Ele criar um novo arquivo no repositória na branch que você está.
+Localize o arquivo no diretório de trabalho e dê um duplo click. Ele vai pedir
+qual aplicativo deve ser utilizado para abrir. Escolha "bloco de notas".
+
+-----------------------------------------------------------------------
 
 
 
